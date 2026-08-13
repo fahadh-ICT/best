@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pearson Edexcel ICT Student Hub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#eef4fa;
+
+color:#222;
+
+}
+
+header{
+
+background:linear-gradient(135deg,#0056b3,#00b7d9);
+
+color:white;
+
+padding:50px 20px;
+
+text-align:center;
+
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+header img{
+
+width:150px;
+
+border-radius:12px;
+
+margin-bottom:20px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+header h1{
+
+font-size:40px;
+
+font-weight:700;
+
+}
+
+header p{
+
+font-size:18px;
+
+margin-top:10px;
+
+opacity:.95;
+
+}
+
+.search-box{
+
+max-width:700px;
+
+margin:35px auto 0;
+
+position:relative;
+
+}
+
+.search-box input{
+
+width:100%;
+
+padding:16px 55px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:17px;
+
+outline:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+.search-box i{
+
+position:absolute;
+
+left:22px;
+
+top:17px;
+
+color:#666;
+
+font-size:18px;
+
+}
+
+main{
+
+max-width:1300px;
+
+margin:auto;
+
+padding:35px 15px;
+
+}
+
+.unit{
+
+margin-bottom:50px;
+
+}
+
+.unit-title{
+
+color:white;
+
+padding:16px 20px;
+
+font-size:28px;
+
+font-weight:700;
+
+border-radius:12px;
+
+margin-bottom:25px;
+
+box-shadow:0 8px 18px rgba(0,0,0,.1);
+
+}
+
+.red{
+
+background:#e53935;
+
+}
+
+.orange{
+
+background:#ff9800;
+
+}
+
+.blue{
+
+background:#03a9f4;
+
+}
+
+.green{
+
+background:#4caf50;
+
+}
+
+.purple{
+
+background:#9c27b0;
+
+}
+
+.teal{
+
+background:#009688;
+
+}
+
+.chapter-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:18px;
+
+padding:22px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.chapter{
+
+font-size:14px;
+
+font-weight:600;
+
+color:#666;
+
+}
+
+.card h3{
+
+margin:8px 0;
+
+font-size:22px;
+
+}
+
+.card p{
+
+color:#777;
+
+margin-bottom:20px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:12px;
+
+}
+
+.btn{
+
+flex:1;
+
+padding:12px;
+
+border-radius:10px;
+
+text-align:center;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.view{
+
+background:#1976d2;
+
+color:white;
+
+}
+
+.download{
+
+background:#43a047;
+
+color:white;
+
+}
+
+.btn:hover{
+
+opacity:.9;
+
+}
+
+footer{
+
+background:#003366;
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:50px;
+
+}
+
+@media(max-width:700px){
+
+header h1{
+
+font-size:28px;
+
+}
+
+.unit-title{
+
+font-size:22px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="cover.jpg" alt="Pearson ICT Book">
+
+<h1>Pearson Edexcel ICT Student Hub</h1>
+
+<p>International GCSE (9-1)</p>
+
+<p>Learning • Practice • Revision • Success</p>
+
+<div class="search-box">
+
+<i class="fas fa-search"></i>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search chapters..."
+onkeyup="searchChapters()">
+
+</div>
+
+</header>
+
+<main>
+
+<!-- UNIT 1 -->
+
+<section class="unit">
+
+<div class="unit-title red">
+
+UNIT 1 • DIGITAL DEVICES
+
+</div>
+
+<div class="chapter-grid">
+
+<div class="card">
+
+<div class="chapter">
+
+Chapter 1
+
+</div>
+
+<h3>Digital Devices</h3>
+
+<p>Understand digital devices and their applications.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 1.pdf"
+target="_blank">
+
+<i class="fas fa-eye"></i>
+
+View
+
+</a>
+
+<a class="btn download"
+href="chapter 1.pdf"
+download>
+
+<i class="fas fa-download"></i>
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="chapter">
+
+Chapter 2
+
+</div>
+
+<h3>Software</h3>
+
+<p>System software, utility software and application software.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 2.pdf"
+target="_blank">
+
+<i class="fas fa-eye"></i>
+
+View
+
+</a>
+
+<a class="btn download"
+href="chapter 2.pdf"
+download>
+
+<i class="fas fa-download"></i>
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="chapter">
+
+Chapter 3
+
+</div>
+
+<h3>Memory and Processors</h3>
+
+<p>Primary memory, secondary storage and CPU architecture.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 3.pdf"
+target="_blank">
+
+<i class="fas fa-eye"></i>
+
+View
+
+</a>
+
+<a class="btn download"
+href="chapter 3.pdf"
+download>
+
+<i class="fas fa-download"></i>
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- UNIT 2 -->
+<!-- ========================= -->
+
+<section class="unit">
+
+<div class="unit-title orange">
+UNIT 2 • CONNECTIVITY
+</div>
+
+<div class="chapter-grid">
+
+<div class="card">
+<div class="chapter">Chapter 4</div>
+
+<h3>Digital Communication</h3>
+
+<p>Email, VoIP, messaging, video conferencing and modern communication technologies.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 4.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 4.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+</div>
+
+<div class="card">
+
+<div class="chapter">Chapter 5</div>
+
+<h3>Networks</h3>
+
+<p>LAN, WAN, Internet, network hardware, protocols and network security.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 5.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 5.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- UNIT 3 -->
+<!-- ========================= -->
+
+<section class="unit">
+
+<div class="unit-title blue">
+UNIT 3 • OPERATING ONLINE
+</div>
+
+<div class="chapter-grid">
+
+<div class="card">
+
+<div class="chapter">
+Chapter 6
+</div>
+
+<h3>Risks to Data and Personal Information</h3>
+
+<p>Cyber threats, malware, phishing, hacking and protecting personal data.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 6.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 6.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">
+Chapter 7
+</div>
+
+<h3>Impact of the Internet</h3>
+
+<p>Benefits and drawbacks of Internet technologies for individuals, businesses and society.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 7.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 7.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">
+Chapter 8
+</div>
+
+<h3>Online Communities</h3>
+
+<p>Social networking, blogs, forums, collaboration tools and online communication.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 8.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 8.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">
+Chapter 9
+</div>
+
+<h3>The Implications of Digital Technologies</h3>
+
+<p>Legal, ethical, environmental and social issues arising from digital technology.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 9.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 9.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">
+Chapter 10
+</div>
+
+<h3>Online Information</h3>
+
+<p>Finding, evaluating, validating and using online information effectively.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 10.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 10.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+    </section>
+    <!-- ========================= -->
+<!-- UNIT 4 -->
+<!-- ========================= -->
+
+<section class="unit">
+
+<div class="unit-title green">
+UNIT 4 • ONLINE GOODS AND SERVICES
+</div>
+
+<div class="chapter-grid">
+
+<div class="card">
+
+<div class="chapter">Chapter 11</div>
+
+<h3>Online Services</h3>
+
+<p>Explore e-commerce, online banking, e-learning, e-government, entertainment services and communication platforms.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 11.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 11.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="chapter">Chapter 12</div>
+
+<h3>The Cloud</h3>
+
+<p>Understand cloud computing, cloud storage, online collaboration and the advantages and disadvantages of cloud services.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 12.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 12.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- UNIT 5 -->
+<!-- ========================= -->
+
+<section class="unit">
+
+<div class="unit-title purple">
+UNIT 5 • APPLYING INFORMATION AND COMMUNICATION TECHNOLOGY
+</div>
+
+<div class="chapter-grid">
+
+<div class="card">
+
+<div class="chapter">Chapter 13</div>
+
+<h3>Applying ICT</h3>
+
+<p>Develop practical ICT skills by solving real-world problems using a range of software applications.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 13.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 13.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- UNIT 6 -->
+<!-- ========================= -->
+
+<section class="unit">
+
+<div class="unit-title teal">
+UNIT 6 • SOFTWARE SKILLS
+</div>
+
+<div class="chapter-grid">
+
+<div class="card">
+
+<div class="chapter">Chapter 14</div>
+
+<h3>File Management</h3>
+
+<p>Organise files and folders, manage storage devices and perform file operations efficiently.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 14.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 14.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">Chapter 15</div>
+
+<h3>Word Processing</h3>
+
+<p>Create professional documents using formatting tools, styles, tables, images and templates.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 15.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 15.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">Chapter 16</div>
+
+<h3>Graphics</h3>
+
+<p>Create and edit digital images using drawing tools, layers, colour correction and image manipulation techniques.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 16.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 16.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">Chapter 17</div>
+
+<h3>Presentations</h3>
+
+<p>Design engaging presentations using slides, animations, multimedia and effective presentation techniques.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 17.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 17.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">Chapter 18</div>
+
+<h3>Web Authoring</h3>
+
+<p>Create websites using HTML, CSS, hyperlinks, images, navigation and responsive web design principles.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 18.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 18.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">Chapter 19</div>
+
+<h3>Spreadsheets</h3>
+
+<p>Perform calculations, create charts, analyse data and use spreadsheet functions to solve problems.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 19.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 19.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="chapter">Chapter 20</div>
+
+<h3>Database Management</h3>
+
+<p>Create databases, design tables, build queries, forms and reports to manage information efficiently.</p>
+
+<div class="buttons">
+
+<a class="btn view"
+href="chapter 20.pdf"
+target="_blank">
+<i class="fas fa-eye"></i> View
+</a>
+
+<a class="btn download"
+href="chapter 20.pdf"
+download>
+<i class="fas fa-download"></i> Download
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+    </section>
+    </main>
+
+<footer>
+
+<div style="max-width:1200px;margin:auto;">
+
+<h2 style="margin-bottom:10px;">
+<i class="fas fa-laptop-code"></i>
+Teacher Fahadh ICT Hub
+</h2>
+
+<p style="margin-bottom:10px;">
+Pearson Edexcel International GCSE (9-1) Information and Communication Technology
+</p>
+
+<p style="margin-bottom:20px;">
+Learning • Practice • Revision • Examination Success
+</p>
+
+<div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
+
+<a href="https://github.com/teacherfahadh-ai"
+style="color:white;font-size:24px;">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://fahadict.github.io/tech/"
+style="color:white;font-size:24px;">
+<i class="fas fa-globe"></i>
+</a>
+
+<a href="mailto:teacherfahadh@gmail.com"
+style="color:white;font-size:24px;">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://wa.me/252636710907"
+style="color:white;font-size:24px;">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+<hr style="margin:25px 0;border:0;border-top:1px solid rgba(255,255,255,.2);">
+
+<p>
+
+© 2026 Teacher Fahadh ICT Hub
+
+</p>
+
+<p>
+
+Designed for Pearson Edexcel ICT Students
+
+</p>
+
+</div>
+
+</footer>
+
+<script>
+
+function searchChapters(){
+
+let input=document.getElementById("searchInput").value.toLowerCase();
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text=card.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+card.style.display="block";
+
+}
+
+else{
+
+card.style.display="none";
+
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
