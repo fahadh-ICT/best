@@ -1,83 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pearson Edexcel ICT Student Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
+:root{
+  --bg1:#f8fbff;
+  --bg2:#eef4fa;
+  --text:#102033;
+  --muted:#5f6b7a;
+  --card:#ffffff;
+  --border:rgba(16,32,51,.08);
+  --shadow:0 12px 32px rgba(16,32,51,.10);
+  --shadow2:0 18px 42px rgba(16,32,51,.16);
+  --primary:#0b5ed7;
+  --primary2:#00b8d9;
+  --accent:#ffb703;
+  --green:#22a06b;
+  --purple:#7c3aed;
+  --red:#e53935;
+  --dark:#0b1b2b;
+}
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
 }
-:root{
-  --bg:#eef4fa;
-  --text:#1f2937;
-  --muted:#64748b;
-  --card:#ffffff;
-  --border:rgba(15,23,42,.08);
-  --shadow:0 12px 30px rgba(15,23,42,.08);
-  --shadow-hover:0 18px 42px rgba(15,23,42,.14);
-  --primary:#0056b3;
-  --primary2:#00b7d9;
-  --green:#2e7d32;
-  --blue:#1976d2;
-  --orange:#ef6c00;
-  --purple:#7b1fa2;
-  --red:#d32f2f;
-  --dark:#0f172a;
-}
+
 html{scroll-behavior:smooth;}
+
 body{
-  background:
-    radial-gradient(circle at top left, rgba(0,183,217,.10), transparent 28%),
-    radial-gradient(circle at top right, rgba(0,86,179,.10), transparent 22%),
-    linear-gradient(180deg,#f8fbff 0%, #eef4fa 100%);
   color:var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(0,184,217,.10), transparent 22%),
+    radial-gradient(circle at 90% 10%, rgba(11,94,215,.10), transparent 20%),
+    linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 100%);
 }
-a{
-  color:inherit;
-  text-decoration:none;
-}
+
+a{color:inherit;text-decoration:none;}
+
 header{
   position:relative;
   overflow:hidden;
-  background:linear-gradient(135deg,var(--primary),var(--primary2));
+  background:linear-gradient(135deg,#083b8a 0%, var(--primary) 45%, var(--primary2) 100%);
   color:#fff;
-  padding:44px 18px 34px;
+  padding:44px 18px 38px;
   text-align:center;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
+  box-shadow:0 10px 30px rgba(0,0,0,.14);
 }
+
 header::before{
   content:"";
   position:absolute;
-  inset:-60px -80px auto auto;
-  width:260px;
-  height:260px;
+  width:320px;
+  height:320px;
   border-radius:50%;
+  right:-110px;
+  top:-120px;
   background:rgba(255,255,255,.09);
 }
+
 header::after{
   content:"";
   position:absolute;
-  inset:auto auto -110px -80px;
-  width:280px;
-  height:280px;
+  width:260px;
+  height:260px;
   border-radius:50%;
+  left:-120px;
+  bottom:-140px;
   background:rgba(255,255,255,.08);
 }
+
 .header-wrap{
   position:relative;
   z-index:1;
   max-width:1200px;
   margin:auto;
 }
+
 .brand{
   display:flex;
   align-items:center;
@@ -86,40 +94,90 @@ header::after{
   flex-wrap:wrap;
   margin-bottom:14px;
 }
+
 .brand img{
-  width:88px;
-  height:88px;
+  width:92px;
+  height:92px;
   object-fit:cover;
-  border-radius:20px;
-  box-shadow:0 10px 24px rgba(0,0,0,.2);
-  border:3px solid rgba(255,255,255,.22);
+  border-radius:22px;
+  border:3px solid rgba(255,255,255,.24);
+  box-shadow:0 12px 26px rgba(0,0,0,.18);
 }
+
 .brand-text h1{
-  font-size:clamp(30px,4vw,48px);
-  font-weight:800;
+  font-size:clamp(30px,4vw,50px);
   line-height:1.05;
+  font-weight:900;
 }
+
 .brand-text p{
   margin-top:8px;
   font-size:16px;
   opacity:.96;
 }
+
 .hero-note{
   display:inline-flex;
-  gap:10px;
   align-items:center;
-  margin-top:18px;
+  gap:10px;
   background:rgba(255,255,255,.14);
-  padding:10px 16px;
+  padding:11px 16px;
   border-radius:999px;
+  margin-top:18px;
   font-size:14px;
   backdrop-filter:blur(8px);
 }
+
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+
+.action-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 18px;
+  border-radius:16px;
+  font-weight:800;
+  letter-spacing:.2px;
+  box-shadow:0 12px 24px rgba(0,0,0,.13);
+  transition:.25s ease;
+}
+
+.action-btn:hover,
+.action-btn:focus-visible{
+  transform:translateY(-3px);
+  outline:none;
+}
+
+.btn-booklet{
+  background:#ffffff;
+  color:#0f172a;
+}
+
+.btn-pastpapers{
+  background:linear-gradient(135deg,#ffb703 0%, #ffd166 100%);
+  color:#0f172a;
+  border:2px solid rgba(255,255,255,.18);
+  animation:pulseGlow 2.2s infinite;
+}
+
+@keyframes pulseGlow{
+  0%{box-shadow:0 0 0 0 rgba(255,183,3,.55), 0 12px 24px rgba(0,0,0,.13);}
+  70%{box-shadow:0 0 0 16px rgba(255,183,3,0), 0 12px 24px rgba(0,0,0,.13);}
+  100%{box-shadow:0 0 0 0 rgba(255,183,3,0), 0 12px 24px rgba(0,0,0,.13);}
+}
+
 .search-box{
   max-width:760px;
   margin:26px auto 0;
   position:relative;
 }
+
 .search-box input{
   width:100%;
   padding:16px 20px 16px 54px;
@@ -129,6 +187,7 @@ header::after{
   outline:none;
   box-shadow:0 10px 25px rgba(0,0,0,.16);
 }
+
 .search-box i{
   position:absolute;
   left:20px;
@@ -136,31 +195,39 @@ header::after{
   color:#667085;
   font-size:18px;
 }
+
 main{
-  max-width:1300px;
+  max-width:1320px;
   margin:auto;
   padding:34px 16px 48px;
 }
+
 .section{margin-bottom:42px;}
-.section-head{margin-bottom:18px;}
+
+.section-head{
+  margin-bottom:18px;
+}
+
 .section-head h2{
   font-size:clamp(24px,3vw,34px);
   color:#0f172a;
   margin-bottom:8px;
 }
+
 .section-head p{
   color:var(--muted);
   font-size:15px;
-  max-width:860px;
+  max-width:880px;
 }
-.featured-panel{
+
+.panel{
   background:linear-gradient(180deg,#ffffff 0%, #f7fbff 100%);
   border:1px solid var(--border);
-  border-radius:24px;
+  border-radius:26px;
   padding:24px;
   box-shadow:var(--shadow);
-  margin-bottom:34px;
 }
+
 .unit-title{
   color:#fff;
   padding:15px 18px;
@@ -170,28 +237,33 @@ main{
   margin-bottom:20px;
   box-shadow:0 8px 18px rgba(0,0,0,.1);
 }
-.red{background:linear-gradient(135deg,#d32f2f,#ef5350);}
-.orange{background:linear-gradient(135deg,#ef6c00,#ffa726);}
-.purple{background:linear-gradient(135deg,#7b1fa2,#ab47bc);}
+
+.orange{background:linear-gradient(135deg,#ef6c00,#ff9f1c);}
+.red{background:linear-gradient(135deg,#d32f2f,#ff5c5c);}
+.purple{background:linear-gradient(135deg,#7c3aed,#a855f7);}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:18px;
 }
+
 .card{
   background:var(--card);
   border:1px solid var(--border);
-  border-radius:20px;
+  border-radius:22px;
   padding:18px;
   box-shadow:var(--shadow);
-  transition:.28s ease;
   position:relative;
   overflow:hidden;
+  transition:.28s ease;
 }
+
 .card:hover{
   transform:translateY(-6px);
-  box-shadow:var(--shadow-hover);
+  box-shadow:var(--shadow2);
 }
+
 .card::before{
   content:"";
   position:absolute;
@@ -201,54 +273,43 @@ main{
   height:5px;
   background:linear-gradient(90deg,var(--primary),var(--primary2));
 }
-.card.featured::before{
-  background:linear-gradient(90deg,#f59e0b,#f97316);
+
+.card h3{
+  font-size:18px;
+  line-height:1.25;
+  margin-bottom:10px;
+  color:#0f172a;
 }
-.pastpapers-hero{
-  background:linear-gradient(135deg,#fff7cc,#fff, #e8f6ff);
-  border:2px solid #f59e0b;
-  box-shadow:0 18px 42px rgba(245,158,11,.18);
-  transform:scale(1.01);
+
+.card p{
+  color:var(--muted);
+  line-height:1.65;
+  margin-bottom:14px;
+  font-size:13.6px;
 }
-.pastpapers-hero .chapter{
-  background:#f59e0b;
-  color:#111827;
-}
-.pastpapers-hero h3{
-  font-size:22px;
-}
+
 .chapter{
   display:inline-block;
   font-size:12px;
-  font-weight:700;
+  font-weight:800;
   color:#fff;
   background:#334155;
   padding:6px 10px;
   border-radius:999px;
   margin-bottom:12px;
-  letter-spacing:.3px;
   text-transform:uppercase;
+  letter-spacing:.35px;
 }
-.card h3{
-  font-size:18px;
-  line-height:1.25;
-  margin-bottom:10px;
-  color:#111827;
-}
-.card p{
-  color:var(--muted);
-  line-height:1.6;
-  margin-bottom:14px;
-  font-size:13.5px;
-}
+
 .meta{
   display:flex;
   flex-wrap:wrap;
   gap:8px;
   margin-bottom:16px;
-  color:#64748b;
   font-size:12px;
+  color:#64748b;
 }
+
 .meta span{
   display:inline-flex;
   align-items:center;
@@ -258,80 +319,119 @@ main{
   padding:6px 9px;
   border-radius:999px;
 }
+
 .buttons{
   display:flex;
   gap:10px;
 }
+
 .btn{
   flex:1;
-  padding:11px 13px;
-  border-radius:12px;
+  padding:12px 13px;
+  border-radius:13px;
   text-align:center;
-  font-weight:700;
-  transition:.25s;
+  font-weight:800;
+  transition:.25s ease;
 }
-.view{background:var(--blue);color:#fff;}
-.download{background:var(--green);color:#fff;}
+
 .btn:hover,
 .btn:focus-visible{
   transform:translateY(-2px);
-  opacity:.95;
+  opacity:.96;
   outline:none;
 }
+
+.view{background:var(--blue);color:#fff;}
+.download{background:var(--green);color:#fff;}
+
+.booklet-card::before{background:linear-gradient(90deg,#f59e0b,#f97316);}
+.pastpapers-card{
+  border:2px solid rgba(255,183,3,.55);
+  background:
+    radial-gradient(circle at top right, rgba(255,183,3,.18), transparent 28%),
+    linear-gradient(180deg,#fffdf3 0%, #ffffff 100%);
+  box-shadow:0 20px 44px rgba(255,183,3,.18);
+}
+.pastpapers-card::before{background:linear-gradient(90deg,#ffb703,#ffd166);}
+.pastpapers-card .chapter{
+  background:#ffb703;
+  color:#111827;
+}
+.pastpapers-card h3{
+  font-size:22px;
+}
+.pastpapers-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:#fff3bf;
+  color:#7c5d00;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
 .topical-strip{
-  background:linear-gradient(135deg,#fff7ed,#fff);
+  background:linear-gradient(135deg,#fff7ed 0%, #ffffff 100%);
   border:1px solid rgba(239,108,0,.14);
-  border-radius:22px;
+  border-radius:24px;
   padding:20px;
   box-shadow:var(--shadow);
 }
+
 footer{
-  background:#003366;
+  background:#08223f;
   color:#fff;
   text-align:center;
-  padding:26px 16px;
+  padding:28px 16px;
   margin-top:26px;
 }
+
 .footer-wrap{
   max-width:1200px;
   margin:auto;
 }
-.social{
+
+.footer-links{
   display:flex;
   justify-content:center;
   gap:15px;
   flex-wrap:wrap;
-  margin:18px 0 10px;
+  margin-top:16px;
 }
-.social a{
-  color:#fff;
-  font-size:22px;
-  width:42px;
-  height:42px;
+
+.footer-links a{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  width:42px;
+  height:42px;
   border-radius:50%;
   background:rgba(255,255,255,.08);
-  transition:.25s;
+  color:#fff;
 }
-.social a:hover{
-  background:rgba(255,255,255,.18);
-  transform:translateY(-2px);
+
+.footer-links a:hover{
+  background:rgba(255,255,255,.16);
 }
+
 hr{
   margin:22px 0;
   border:0;
   border-top:1px solid rgba(255,255,255,.18);
 }
+
 @media(max-width:700px){
   header{padding:34px 14px 28px;}
   .brand{gap:12px;}
-  .brand img{width:72px;height:72px;}
+  .brand img{width:74px;height:74px;}
   .buttons{flex-direction:column;}
+  .action-btn{width:100%;justify-content:center;}
   .unit-title{font-size:19px;}
   .card h3{font-size:17px;}
-  .pastpapers-hero h3{font-size:20px;}
+  .pastpapers-card h3{font-size:20px;}
 }
 </style>
 </head>
@@ -350,8 +450,17 @@ hr{
 
     <p class="hero-note">
       <i class="fas fa-star"></i>
-      Start with the booklet, then move to past papers, then finish with topical exams
+      Fast access: booklet first, past papers second, topical exams last
     </p>
+
+    <div class="hero-actions">
+      <a class="action-btn btn-booklet" href="#booklet">
+        <i class="fas fa-book-open"></i> Booklet
+      </a>
+      <a class="action-btn btn-pastpapers" href="#pastpapers">
+        <i class="fas fa-bolt"></i> Past Papers
+      </a>
+    </div>
 
     <div class="search-box">
       <i class="fas fa-search"></i>
@@ -362,14 +471,14 @@ hr{
 
 <main>
 
-  <section class="section featured-panel" id="booklet">
+  <section class="section panel" id="booklet">
     <div class="section-head">
       <h2>1. Booklet First</h2>
-      <p>Use the booklet as your starting point for revision, teaching support, and exam preparation.</p>
+      <p>Start here for a clear revision foundation before moving to exam practice.</p>
     </div>
 
     <div class="grid">
-      <article class="card featured">
+      <article class="card booklet-card">
         <div class="chapter">Main Guide</div>
         <h3>ICT Booklet</h3>
         <p>The complete Grade 11 booklet for revision, teaching support, and exam preparation.</p>
@@ -388,17 +497,18 @@ hr{
   <section class="section" id="pastpapers">
     <div class="section-head">
       <h2>2. Past Papers Second</h2>
-      <p>Practice with real Edexcel ICT past papers to identify weak topics and improve exam confidence.</p>
+      <p>These are the highest-value exam practice materials for identifying weak topics and building confidence.</p>
     </div>
 
     <div class="grid">
-      <article class="card pastpapers-hero">
+      <article class="card pastpapers-card">
+        <div class="pastpapers-badge"><i class="fas fa-fire"></i> Most Clicked Resource</div>
         <div class="chapter">High Priority</div>
         <h3>Get Past Papers</h3>
-        <p>Access Edexcel IGCSE ICT past papers and mark schemes for exam code 4IT1.</p>
+        <p>Open Edexcel IGCSE ICT past papers and mark schemes for exam code 4IT1.</p>
         <div class="meta">
           <span><i class="fas fa-file-alt"></i> Written and practical papers</span>
-          <span><i class="fas fa-star"></i> Best for exam practice</span>
+          <span><i class="fas fa-star"></i> Best exam practice</span>
         </div>
         <div class="buttons">
           <a class="btn view" href="https://www.savemyexams.com/igcse/ict/edexcel/past-papers/" target="_blank">Open Past Papers</a>
@@ -408,7 +518,7 @@ hr{
     </div>
   </section>
 
-  <section class="section" id="topical">
+  <section class="section">
     <div class="unit-title red">3. Topical Exams Last</div>
     <div class="grid">
       <article class="card">
@@ -533,25 +643,6 @@ hr{
     </div>
   </section>
 
-  <section class="section">
-    <div class="section-head">
-      <h2>Topical Questions</h2>
-      <p>Add your question bank here after the booklet, past papers, and topical exams.</p>
-    </div>
-    <div class="topical-strip">
-      <div class="grid">
-        <article class="card">
-          <h3>Revision Question Set</h3>
-          <p>Use this section to add topical questions after the booklet and exams.</p>
-          <div class="buttons">
-            <a class="btn view" href="#" target="_blank">View</a>
-            <a class="btn download" href="#" download>Download</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <footer>
@@ -559,14 +650,7 @@ hr{
     <h2 style="margin-bottom:8px;"><i class="fas fa-laptop-code"></i> Teacher Fahadh ICT Hub</h2>
     <p style="margin-bottom:8px;">Pearson Edexcel International GCSE (9-1) Information and Communication Technology</p>
     <p style="margin-bottom:12px;">Learning • Practice • Revision • Examination Success</p>
-
-    <div class="social">
-      <a href="https://fahadict.github.io/tech/" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
-      <a href="mailto:teacherfahadh@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-    </div>
-
     <hr>
-
     <p>© 2026 Teacher Fahadh ICT Hub</p>
     <p>Designed for Pearson Edexcel ICT Students</p>
   </div>
