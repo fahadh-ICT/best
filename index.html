@@ -115,32 +115,6 @@ header::after{
   font-size:14px;
   backdrop-filter:blur(8px);
 }
-.hero-actions{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:24px;
-}
-.action-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:14px 18px;
-  border-radius:14px;
-  font-weight:800;
-  transition:.25s ease;
-  box-shadow:0 10px 22px rgba(0,0,0,.12);
-}
-.action-btn:hover,
-.action-btn:focus-visible{
-  transform:translateY(-3px);
-  opacity:.98;
-  outline:none;
-}
-.btn-booklet{background:#fff;color:#0f172a;}
-.btn-topical{background:#111827;color:#fff;}
-.btn-pastpapers{background:#ffcc00;color:#111827;}
 .search-box{
   max-width:760px;
   margin:26px auto 0;
@@ -229,6 +203,19 @@ main{
 }
 .card.featured::before{
   background:linear-gradient(90deg,#f59e0b,#f97316);
+}
+.pastpapers-hero{
+  background:linear-gradient(135deg,#fff7cc,#fff, #e8f6ff);
+  border:2px solid #f59e0b;
+  box-shadow:0 18px 42px rgba(245,158,11,.18);
+  transform:scale(1.01);
+}
+.pastpapers-hero .chapter{
+  background:#f59e0b;
+  color:#111827;
+}
+.pastpapers-hero h3{
+  font-size:22px;
 }
 .chapter{
   display:inline-block;
@@ -342,9 +329,9 @@ hr{
   .brand{gap:12px;}
   .brand img{width:72px;height:72px;}
   .buttons{flex-direction:column;}
-  .action-btn{width:100%;justify-content:center;}
   .unit-title{font-size:19px;}
   .card h3{font-size:17px;}
+  .pastpapers-hero h3{font-size:20px;}
 }
 </style>
 </head>
@@ -363,20 +350,8 @@ hr{
 
     <p class="hero-note">
       <i class="fas fa-star"></i>
-      Start with the booklet, then practice topical exams, then download past papers
+      Start with the booklet, then move to past papers, then finish with topical exams
     </p>
-
-    <div class="hero-actions">
-      <a class="action-btn btn-booklet" href="#booklet">
-        <i class="fas fa-book-open"></i> Booklet
-      </a>
-      <a class="action-btn btn-topical" href="#topical">
-        <i class="fas fa-list-check"></i> Topical Questions
-      </a>
-      <a class="action-btn btn-pastpapers" href="https://www.savemyexams.com/igcse/ict/edexcel/past-papers/" target="_blank">
-        <i class="fas fa-file-alt"></i> Get Past Papers
-      </a>
-    </div>
 
     <div class="search-box">
       <i class="fas fa-search"></i>
@@ -389,8 +364,8 @@ hr{
 
   <section class="section featured-panel" id="booklet">
     <div class="section-head">
-      <h2>Grade 11 Starting Point</h2>
-      <p>Begin with the booklet, then move through the topical exams for focused revision and stronger exam practice.</p>
+      <h2>1. Booklet First</h2>
+      <p>Use the booklet as your starting point for revision, teaching support, and exam preparation.</p>
     </div>
 
     <div class="grid">
@@ -410,8 +385,31 @@ hr{
     </div>
   </section>
 
+  <section class="section" id="pastpapers">
+    <div class="section-head">
+      <h2>2. Past Papers Second</h2>
+      <p>Practice with real Edexcel ICT past papers to identify weak topics and improve exam confidence.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card pastpapers-hero">
+        <div class="chapter">High Priority</div>
+        <h3>Get Past Papers</h3>
+        <p>Access Edexcel IGCSE ICT past papers and mark schemes for exam code 4IT1.</p>
+        <div class="meta">
+          <span><i class="fas fa-file-alt"></i> Written and practical papers</span>
+          <span><i class="fas fa-star"></i> Best for exam practice</span>
+        </div>
+        <div class="buttons">
+          <a class="btn view" href="https://www.savemyexams.com/igcse/ict/edexcel/past-papers/" target="_blank">Open Past Papers</a>
+          <a class="btn download" href="https://www.savemyexams.com/igcse/ict/edexcel/past-papers/" target="_blank">Visit Now</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="section" id="topical">
-    <div class="unit-title red">GRADE 11 TOPICAL EXAMS</div>
+    <div class="unit-title red">3. Topical Exams Last</div>
     <div class="grid">
       <article class="card">
         <h3>Digital Devices Exam</h3>
@@ -536,7 +534,10 @@ hr{
   </section>
 
   <section class="section">
-    <div class="unit-title purple">Topical Questions</div>
+    <div class="section-head">
+      <h2>Topical Questions</h2>
+      <p>Add your question bank here after the booklet, past papers, and topical exams.</p>
+    </div>
     <div class="topical-strip">
       <div class="grid">
         <article class="card">
@@ -560,10 +561,8 @@ hr{
     <p style="margin-bottom:12px;">Learning • Practice • Revision • Examination Success</p>
 
     <div class="social">
-      <a href="https://github.com/teacherfahadh-ai" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://fahadict.github.io/tech/" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
       <a href="mailto:teacherfahadh@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://wa.me/252636710907" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
 
     <hr>
